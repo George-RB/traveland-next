@@ -1,3 +1,5 @@
+'use client';
+
 import { Navigation } from '@/types/navigation';
 import { Button } from '@/types/buttons';
 
@@ -8,18 +10,26 @@ const navItems: Navigation = [
   { label: 'About', href: '#About' },
   { label: 'Contact', href: '#Contact' },
 ];
-
+const handleBookClick = () => {
+  alert('Buttons is clicked');
+};
+const handleExploreClick = () => {
+  alert('Buttons is clicked');
+};
 const buttonBook: Button = {
   id: 'btnBook',
   className:
     'py-3.5 px-9 bg-red-400 rounded-sm flex-0.5 cursor-pointer hover:scale-105 transition-all',
   text: 'Booking now',
+  onClick: handleBookClick,
 };
+
 const buttonExplore: Button = {
   id: 'btnExplore',
   className:
     'py-3.5 px-9 bg-red-400 rounded-sm flex-0.5 cursor-pointer hover:scale-105 transition-all',
   text: 'Explore more',
+  onClick: handleExploreClick,
 };
 
 export default function Home() {
@@ -55,7 +65,11 @@ export default function Home() {
           ))}
         </ul>
 
-        <button id={buttonBook.id} className={buttonBook.className}>
+        <button
+          id={buttonBook.id}
+          className={buttonBook.className}
+          onClick={buttonBook.onClick}
+        >
           {buttonBook.text}
         </button>
 
@@ -81,7 +95,11 @@ export default function Home() {
         >
           Explore more
         </button> */}
-        <button id={buttonExplore.id} className={buttonExplore.className}>
+        <button
+          id={buttonExplore.id}
+          className={buttonExplore.className}
+          onClick={buttonExplore.onClick}
+        >
           {buttonExplore.text}
         </button>
       </section>
