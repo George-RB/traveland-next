@@ -1,10 +1,20 @@
+import { Navigation } from '@/types/navigation';
+
+const navItems: Navigation = [
+  { label: 'Home', href: '#Home' },
+  { label: 'Location', href: '#Location' },
+  { label: 'Blog', href: '#Blog' },
+  { label: 'About', href: '#About' },
+  { label: 'Contact', href: '#Contact' },
+];
+
 export default function Home() {
   return (
     <header className="max-w-[1600px] my-0 mx-auto text-white">
       <nav className="flex max-w-6xl my-0 mx-auto justify-between items-center pt-9">
-        <p id="Home">Trevland</p>
+        <p id="Home">Traveland</p>
         <ul className="flex justify-between cursor-pointer space-x-8 text-lg text-white [&>li>a]:hover:transition-all [&>li>a]:hover:text-red-400">
-          <li>
+          {/* <li>
             <a href="#Home">Home</a>
           </li>
           <li>
@@ -18,7 +28,17 @@ export default function Home() {
           </li>
           <li>
             <a href="#Contact">Contact</a>
-          </li>
+          </li> */}
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                className="hover:text-red-400 transition-colors"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
         <button
           id="btnBook"

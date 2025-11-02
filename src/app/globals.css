@@ -1,9 +1,19 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
+  --bg-image: url('/img/background.jpg');
+}
+
+body {
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -18,9 +28,9 @@
     --foreground: #ededed;
   }
 }
-
+/* 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
