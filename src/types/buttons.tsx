@@ -1,5 +1,7 @@
 export interface ButtonItem {
-  name: string;
+  id: string;
+  className: string;
+  text: string;
 }
 
-export type Button = ButtonItem[];
+export type Button = ButtonItem;
