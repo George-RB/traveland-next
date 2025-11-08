@@ -1,4 +1,4 @@
-import { locationItems } from '@/types/locations';
+import { locationItems } from '@/data/location';
 
 function PostHeadSection() {
   return (

@@ -1,5 +1,5 @@
-import { navItems } from '@/types/navigation';
-import { buttonBook, buttonExplore } from '@/types/buttons';
+import { navItems } from '@/data/navigation';
+import { buttonBook, buttonExplore } from '@/data/buttons';
 
 function Header() {
   return (
